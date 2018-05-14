@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/imgContainer"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/closeEditor"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/close"
+            android:text="C" />
+
+        <ImageButton
+            android:id="@+id/addSticker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/addBrushPath"
+            android:background="@null"
+            android:src="@drawable/sticker"
+            android:text="S" />
+
+        <ImageButton
+            android:id="@+id/addBrushPath"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/addNewTextView"
+            android:background="@null"
+            android:src="@drawable/brush"
+            android:text="B" />
+
+        <ImageButton
+            android:id="@+id/addNewTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/addtext"
+            android:text="T" />
+
+        <ImageButton
+            android:id="@+id/deleteItemLayout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/circle_white"
+            android:padding="20dp"
+            android:src="@drawable/delete"
+            android:text="Del"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/textEditLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <EditText
+            android:id="@+id/textToEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="hi"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/textGravity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:src="@drawable/center"
+            android:text="G" />
+
+        <ImageButton
+            android:id="@+id/textStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/textGravity"
+            android:background="@null"
+            android:src="@drawable/bold"
+            android:text="S" />
+
+        <Button
+            android:id="@+id/doneEditingText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="Done"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <!-- This library requires pair of the VerticalSeekBar and VerticalSeekBarWrapper classes -->
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@+id/textSizeChanger"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:max="50"
+                android:min="15"
+                android:progress="40"
+                android:splitTrack="false"
+                app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/colorDropper"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/textGravity"
+                android:background="@null"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/colordropper"
+                android:text="S" />
+
+            <Button
+                android:id="@+id/color1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/textGravity"
+                android:text="S" />
+
+            <Button
+                android:id="@+id/color2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/textGravity"
+                android:text="S" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
